@@ -1,0 +1,12 @@
+x=0
+y=0
+def setup():
+    size(400,400)
+def draw():
+    translate(200,200)
+    background("#A21CA5")
+    global x,y
+    x+=1
+    y+=1
+    rotate(radians(y))
+    ellipse(100,50,20,20)
