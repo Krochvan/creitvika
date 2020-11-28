@@ -1,0 +1,20 @@
+x=0
+y=0
+z=random(4,50)
+c=2
+def setup():
+    size(400,400)
+def draw():
+    background("#FFFFF")
+    global x,y,z,c
+    x+=z
+    y+=c
+    ellipse(x,y,20,20)
+    if x>=400:
+        z=-4
+    if x<=0:
+        z=4
+    if y>=400:
+        c=-4
+    if y<=0:
+        c=4
