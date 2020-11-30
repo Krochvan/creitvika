@@ -1,0 +1,16 @@
+number=0
+def setup():
+    size(400,400)
+def draw():
+    global number
+    number+=1
+    if mousePressed and (mouseButton == LEFT):
+        fill("#CB0E0E")
+        textSize(32)
+        text("number", 10, 30)
+        
+    elif mousePressed and (mouseButton == RIGHT):
+        fill("#CB0E0E")
+    else:
+        fill("#FA0808")
+    ellipse(200,200,50,50)
