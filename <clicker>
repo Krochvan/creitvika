@@ -1,0 +1,36 @@
+number=0
+def setup():
+    size(400,400)
+def draw():
+    global number
+    background(1)
+    if number>50000:
+        background(random(0,255),random(0,255),random(0,255))
+    fill("#CB0E0E")
+    ellipse(200,200,50,50)
+    fill("#CB0E0E")
+    textSize(32)
+    text(number, 10, 30)
+    textSize(15)
+    fill("#FFFFFF")
+    text("upgrade=50",250,245)
+    text("upgrade=200",250,200)
+    text("upgrade=500",250,150)
+    text("upgrade=3000",250,100)
+def mouseClicked():
+    global number
+    number+=1
+    if number>50:
+        number+=5
+    if number>200:
+        number+=15
+    if number>500:
+        number+=40
+    if number>3000:
+        number+=500
+    fill("#CB0E0E")
+    textSize(32)
+    text(number, 10, 30)
+    fill("#CB0E0E")
+    ellipse(200,200,50,50)
+    fill("#20FA00")
