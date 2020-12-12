@@ -7,14 +7,18 @@ def setup():
 def draw():
     background("#FFFFF")
     global x,y,z,c
-    x+=z
-    y+=c
+    if mousePressed:
+        x=mouseX
+        y=mouseY
+    else:
+        x+=z
+        y+=c
+        if x>=400:
+            z=-4
+        if x<=0:
+            z=4
+        if y>=400:
+            c=-4
+        if y<=0:
+            c=4
     ellipse(x,y,20,20)
-    if x>=400:
-        z=-4
-    if x<=0:
-        z=4
-    if y>=400:
-        c=-4
-    if y<=0:
-        c=4
