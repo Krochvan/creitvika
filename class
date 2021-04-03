@@ -1,0 +1,17 @@
+class Circl:
+    def __init__(self,sz,x,y):
+        self.sz=sz
+        self.x=x
+        self.y=y
+        self.speed=speed
+        self.img = loadImage('kot.jpg')
+        imageMode(CENTER)
+    def draw_(self):
+        image(self.img , self.x , self.y , 100,100)
+def setup():
+    size(400,400)
+def draw():
+    global
+    background(255)
+    circl=Circl(100,200,200)
+    circl.draw_()
