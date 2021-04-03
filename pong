@@ -1,0 +1,22 @@
+ball= dict(x=100,diam=100, y=50, dx=5, dy=10)
+ro=dict(x=100,y=380)
+def setup():
+    size(600,600)
+    rectMode(CENTER)
+def draw():
+    global ball
+    background(255)
+    ball['x']+=ball['dx']
+    ball['y']+=ball['dy']
+    if ball['x']>width-ball['diam']/2:
+        ball['dx']*=-1
+    elif ball['x']<ball['diam']/2:
+        ball['dx']*=-1
+    if ball['y']>height-ball['diam']/2:
+        ball['dy']*=-1
+    elif ball['y']<ball['diam']/2:
+        ball['dy']*=-1
+    circle(ball['x'],ball['y'],ball['diam'])
+    ro['x']=mouseX
+    rect(ro['x'],ro['y'],160,20)
+    if ball['x']>ro['x'] - 60/2 and  ball['x']>ro['x'] + 60/2 and  ball['y']>ro['y'] - 60/2+
