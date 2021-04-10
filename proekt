@@ -1,0 +1,19 @@
+class Obstacle:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    def draw_(self):
+        square(self.x ,self.y , 25)
+
+ob = Obstacle(200,200)
+
+def setup():
+    size(400,400)
+def draw():
+    global ob
+    fill(255)
+    for y in range(16):
+        for x in range(16):
+            rect(x*25,y*25,25,25)
+    fill(0)
+    ob.draw_()
