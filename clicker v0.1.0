@@ -1,13 +1,19 @@
 number=0
 def setup():
+    global img1
+    img1 = loadImage("zavod1.png")
     size(400,400)
 def draw():
-    global number
+    global number,img1
+    
     background(1)
     if number>50000:
         background(random(0,255),random(0,255),random(0,255))
     fill("#CB0E0E")
     ellipse(200,200,50,50)
+    
+    image(img1,100,100,200,200)
+    
     fill("#CB0E0E")
     textSize(32)
     text(number, 10, 30)
