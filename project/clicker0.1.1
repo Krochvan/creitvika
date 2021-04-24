@@ -1,19 +1,20 @@
 number=0
 def setup():
     global img1
-    img1 = loadImage("zavod1.png")
+    img1 = loadImage("zavod2.png")
     size(400,400)
 def draw():
+    rectMode(CENTER)
     global number,img1
-    
     background(1)
     if number>50000:
         background(random(0,255),random(0,255),random(0,255))
+    fill("#6C6969")
+    rect(random(90,120),random(90,50),random(10,50),random(10,50))
+    rect(random(100,150),random(50,20),random(10,50),random(10,50))
     fill("#CB0E0E")
     ellipse(200,200,50,50)
-    
-    image(img1,100,100,200,200)
-    
+    image(img1,40,100,200,200)
     fill("#CB0E0E")
     textSize(32)
     text(number, 10, 30)
