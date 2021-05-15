@@ -1,30 +1,43 @@
 number=0
 def setup():
-    global img1,img2
+    global img1,img2,korobka,img3,img4,img5
     img1 = loadImage("zavod2.png")
+    img4 = loadImage("zavod3.png")
     img2 = loadImage("fon1.png")
+    korobka = loadImage("korobka.png")
+    img3 = loadImage("fon2.png")
     size(400,400)
 def draw():
     rectMode(CENTER)
-    global number,img1,img2
+    global number,img1,img2,korobka,img3,img4,img5
     if number>-1:
-        number+=0.001
-    image(img1,40,100,200,200)
-    image(img2,0,0,400,400)
+        number+=10
+        fill("#6C6969")
+        image(img2,0,0,400,400)
+    image(korobka,0,0,100,100)
+    if number <=500:
+        rect(random(90,120),random(90,50),random(10,50),random(10,50))
+        rect(random(100,150),random(50,20),random(10,50),random(10,50))
+        image(img1,40,100,200,200)
     if number>50:
-        number+=0.01
+        number+=001
     if number>200:
-        number+=0.1
+        number+=0.01
     if number>500:
-        number+=40
+        number+=0.1
+        image(img3,0,0,400,400)
+        image(img4,40,100,200,200)
+        fill("#6C6969")
+        rect(random(90,150),random(90,50),random(10,50),random(10,50))
+        rect(random(100,100),random(50,20),random(10,50),random(10,50))
+        rect(random(200,100),random(90,50),random(10,50),random(10,50))
+        rect(random(200,170),random(50,20),random(10,50),random(10,50))
+        rect(random(250,150),random(90,50),random(10,50),random(10,50))
+        rect(random(250,170),random(50,20),random(10,50),random(10,50))
     if number>3000:
-        number+=500
-    fill("#6C6969")
-    rect(random(90,120),random(90,50),random(10,50),random(10,50))
-    rect(random(100,150),random(50,20),random(10,50),random(10,50))
+        number+=1
     fill("#CB0E0E")
     ellipse(200,200,50,50)
-    image(img1,40,100,200,200)
     fill("#CB0E0E")
     textSize(32)
     text(number, 10, 30)
