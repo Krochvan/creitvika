@@ -1,5 +1,6 @@
 number=0
 def setup():
+    #создаю условия для картинок
     global img1,img2,korobka,img3,img4,img5
     img1 = loadImage("zavod2.png")
     img4 = loadImage("zavod3.png")
@@ -11,16 +12,18 @@ def setup():
 def draw():
     rectMode(CENTER)
     global number,img1,img2,korobka,img3,img4,img5
+    #делаю условия для самой игры
     if number>-1:
         number+=0.0001
         fill("#6C6969")
         image(img2,0,0,400,400)
     image(korobka,0,0,100,100)
+    fill('#FFFFFF')
+    rect(70,200,220,190)
     if number <=500:
         rect(random(90,120),random(90,50),random(10,50),random(10,50))
         rect(random(100,150),random(50,20),random(10,50),random(10,50))
         fill('#FFFFFF')
-        rect(70,200,220,190)
         image(img1,40,100,200,200)
     if number>50:
         number+=0.01
@@ -38,6 +41,7 @@ def draw():
         rect(random(145,170),random(120,130),random(20,60),random(20,60))
     if number>3000:
         number+=1
+    #текст в игре
     fill("#CB0E0E")
     ellipse(200,200,50,50)
     fill("#FFFFFF")
@@ -49,9 +53,14 @@ def draw():
     text("upgrade=200",250,200)
     text("upgrade=500",250,150)
     text("upgrade=3000",250,100)
-    textSize(15)
-    text(u'работать',170,200)
+    textSize(11)
+    text(u'работать',175,200)
+    fill("#000000")
+    textSize(13)
+    text(u'ваш',1,200)
+    text(u'завод:',1,220)
 def mouseClicked():
+    #регистрирование нажатия
     mX=mouseX
     mY=mouseY
     global number
@@ -72,3 +81,4 @@ def mouseClicked():
     text(number, 10, 30)
     fill("#CB0E0E")
     ellipse(200,200,50,50)
+    #79 строк кода
