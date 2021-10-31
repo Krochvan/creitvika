@@ -1,0 +1,11 @@
+dela=["побрить кота","угнать ламбу у А4","украсть бомжа"]
+print("чтобы узнать команды напишите !help")
+a=input()
+if a=="!help":
+    print("!dela/!del/!add")
+s=input()
+if s=="!dela":
+    print(dela)
+d=input()
+if d=="!del":
+    for index.len(3) in range(len(dela)):
